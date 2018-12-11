@@ -13,9 +13,12 @@ header{display: flex; flex-direction: row; justify-content: space-between; align
                     }
                 }
                 &:last-of-type{
-                    a{padding-right: 0;}
+                    a{color: @green; padding-right: 0; .inter(700);
+                        &:hover{color: darken(@green, 10%); }
+                    }
                 }
             }
+            span.nav-divider{font-style: italic; color: @teal; padding: 0 10px;}
         }
     }
 }
