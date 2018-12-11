@@ -1,0 +1,20 @@
+@import url("../../styles.less");
+
+section.hero-section{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: calc(100vh - 75px);
+    .hero-text{display: flex; flex-direction: row; justify-content: center; align-items: center;
+        h1{color: @white; font-size: 64px; text-align: center; flex: 1;}
+        span.hero-text-divider{width: 2px; height: 125px; background: @teal; margin: 0 40px; animation: cursor-blink .85s infinite alternate;}
+        h2{display: flex; flex-direction: column; justify-content: center; align-items: center; .inter(400); font-size: 21px; font-style: italic; text-align: center; flex: 1;
+            span.hero-dates{color: @blue; font-size: 16px; margin-top: 12px;}
+            a.hero-cta{display: flex; justify-content: center; align-items: center; flex-shrink: 0; min-width: 125px; height: 40px; padding: 0 20px; background: @green; color: @darkest-grey; .inter(900); font-size: 18px; border-radius: 5px; box-shadow: 0 5px 8px 0 #111; text-transform: uppercase; text-decoration: none; margin-top: 25px; transform: scale(1) translateY(0); will-change: transform; transition: .25s ease-in-out;
+                &:hover{background: darken(@green, 10%); transform: scale(1.02) translateY(-2px); box-shadow: 0 8px 12px 0 #111; cursor: pointer;}
+            }
+        }
+    }
+}
+
+
+@keyframes cursor-blink {
+    0%{opacity: 0;}
+    100% {opacity: 1;}
+}
