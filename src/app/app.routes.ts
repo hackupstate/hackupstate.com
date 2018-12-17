@@ -7,6 +7,7 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { JobsComponent } from './jobs/jobs.component';
 
 const routes: Routes = [
 
@@ -57,6 +58,13 @@ const routes: Routes = [
         component: ContactComponent,
         data: {
             state: 'contact'
+        }
+    },
+    {
+        path: 'jobs',
+        component: JobsComponent,
+        data: {
+            state: 'jobs'
         }
     },
     {

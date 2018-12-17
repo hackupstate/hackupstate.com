@@ -1,32 +1,5 @@
 @import url("../../styles.less");
 
-section.hero-section{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: calc(100vh - 75px);
-    .hero-text{display: flex; flex-direction: row; justify-content: center; align-items: center;
-        h1{color: @teal; .inter(700); font-size: 64px; text-align: center; flex: 1; background-image: linear-gradient(180deg,transparent 70%,rgba(51,213,195,.15) 0)}
-        span.hero-text-divider{width: 2px; height: 125px; background: @teal; margin: 0 40px; animation: cursor-blink .85s infinite alternate;}
-        .terminal-divider{width: 60px; height: 60px; background: url("../../assets/img/terminal.png") no-repeat center center; background-size: contain; background-color: @darker-grey; border-radius: 8px; margin: 0 40px 0 70px; }
-        h2{display: flex; flex-direction: column; justify-content: center; align-items: center; .inter(500); font-size: 20px; font-style: italic; text-align: center; flex: 1;
-            span.hero-dates{color: darken(@teal, 15%); font-size: 16px; margin-top: 10px; .inter(400);
-                span{color: @teal;}
-            }
-            a.hero-cta{display: flex; justify-content: center; align-items: center; flex-shrink: 0; min-width: 125px; height: 40px; padding: 0 20px; background: @green; color: @darker-grey; .inter(900); font-size: 18px; border-radius: 8px; box-shadow: 0 5px 8px 0 #111; text-transform: uppercase; text-decoration: none; margin-top: 40px; transform: scale(1) translateY(0); will-change: transform; transition: .25s ease-in-out;
-                &:hover{background: darken(@green, 10%); transform: scale(1.02) translateY(-2px); box-shadow: 0 8px 12px 0 #111; cursor: pointer;}
-            }
-        }
-    }
-}
-
-section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 100vh; padding: 60px 40px; background-color: #1c1c27; background-image: linear-gradient(300deg, #1c1c27 -25%, #20383e 65%, #257E79, #5fb791 175%);
-    &.alt-bg{background: @darker-grey;
-        h1{color: @teal;
-            &:after{background: @teal;}
-        }
-    }
-
-    h1{color: @darkest-grey; text-transform: uppercase; letter-spacing: 1px; position: relative;
-        &:after{content: ''; width: 33%; height: 3px; border-radius: 25px; background: @darkest-grey; position: absolute; bottom: -5px; left: 0;}
-    }
-}
 
 @keyframes cursor-blink {
     0%{opacity: 0;}
