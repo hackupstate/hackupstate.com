@@ -125,3 +125,9 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         &:after{content: ''; width: 33%; height: 3px; border-radius: 25px; background: @darkest-grey; position: absolute; bottom: -5px; left: 0;}
     }
 }
+
+@media screen and (max-width: 960px){
+    section.hero-section{
+        .hero-text{flex-direction: column;}
+    }
+}
