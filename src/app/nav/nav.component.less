@@ -1,7 +1,7 @@
 @import url("../../styles.less");
 
 header{display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 75px; padding: 0 25px 0 20px; position: sticky; top: -1px; z-index: 1000;
-    .hu-logo{width: 50px; height: 50px; background: url("../../assets/img/hu-logo-small.png") no-repeat center center; background-size: contain;}
+    .hu-logo{width: 50px; height: 50px; background: url("../../assets/img/hu-logo-small.png") no-repeat center center; background-size: contain; position: relative; z-index: 10000000;}
     nav{display: flex; flex-direction: row; justify-content: flex-end; align-items: center; will-change: transform;
         ul{display: flex; flex-direction: row; justify-content: flex-end; align-items: center; margin: 0; padding: 0;
             li{
@@ -22,24 +22,26 @@ header{display: flex; flex-direction: row; justify-content: space-between; align
         }
     }
     &:stuck{background: @darkest-grey;}
-    .nav-icon{display: none; position: fixed; top: 20px; right: 20px; z-index: 100000;}
-    svg {width: 66px; height: 50px; cursor: pointer; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+    .nav-icon{display: none; position: fixed; top: 15px; right: 15px; z-index: 100000;}
+    svg {width: 72px; height: 55px; cursor: pointer; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
     path {fill: none; -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25); -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25); -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25); -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25); transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25); stroke-width: 40px; stroke-linecap: round; stroke: @teal; stroke-dashoffset: 0px;}
     path#top, path#bottom {stroke-dasharray: 240px 950px;}
     path#middle {stroke-dasharray: 240px 240px;}
-    .cross path#top, .cross path#bottom {stroke-dashoffset: -650px; stroke-dashoffset: -650px;}
-    .cross path#middle {stroke-dashoffset: -115px; stroke-dasharray: 1px 220px;}
+
+    .active path#top, .active path#bottom {stroke-dashoffset: -650px; stroke-dashoffset: -650px;}
+    .active path#middle {stroke-dashoffset: -115px; stroke-dasharray: 1px 220px;}
 }
 
 @media screen and (max-width: 960px){
     header{
-        nav{flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; background-color: @teal; position: absolute; top: 0; right: 0; transform: translateY(-100%); transition: .25s ease-in-out;
-            ul{flex-direction: column; justify-content: flex-start; align-items: center;
+        nav{flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: @darkest-grey; position: absolute; top: 0; right: 0; transform: translateY(-100%); transition: .25s ease-in-out;
+            ul{flex-direction: column; justify-content: flex-end; align-items: center; height: 90%;
                 li{
-                    a{color: @darkest-grey;
-                        &:after{bottom: 50%; transform: translate(-50%, 0); left: -10px;}
+                    a{display: flex;  .inter(700); font-size: 21px; padding: 8px 8px;
+                        &:after{bottom: 42%; transform: translate(-50%, 0); left: -10px;}
                     }
                 }
+                span.nav-divider{display: none;}
             }
             &.active{transform: translateY(0);}
         }

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.less']
 })
 export class NavComponent implements OnInit {
+  expanded = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleNav() {
+    this.expanded = !this.expanded;
+  }
 }
