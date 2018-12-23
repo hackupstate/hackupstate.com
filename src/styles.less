@@ -128,6 +128,22 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
 
 @media screen and (max-width: 960px){
     section.hero-section{
-        .hero-text{flex-direction: column;}
+        .hero-text{flex-direction: column;
+            h1{padding: 0 10px;}
+            .terminal-divider{margin: 40px 0;}
+        }
+    }
+}
+
+@media screen and (max-width: 625px){
+    section.hero-section{
+        .hero-text{
+            h1{font-size: 46px;}
+            .terminal-divider{width: 45px; height: 45px;}
+            h2{font-size: 16px;
+                span.hero-dates{font-size: 14px;}
+                a.hero-cta{font-size: 16px;}
+            }
+        }
     }
 }
