@@ -36,9 +36,9 @@ header{display: flex; flex-direction: row; justify-content: space-between; align
 @media screen and (max-width: 960px){
     header{
         nav{flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: @darkest-grey; position: fixed; top: 0; right: 0; transform: translateY(-100%); transition: .25s ease-in-out;
-            ul{flex-direction: column; justify-content: flex-end; align-items: center; height: 90%;
+            ul{flex-direction: column; justify-content: flex-end; align-items: center; height: 90%; padding-bottom: 40px;
                 li{
-                    a{display: flex;  .inter(700); font-size: 21px; padding: 8px 8px;
+                    a{display: flex;  .inter(700); font-size: 21px; padding: 12px 8px;
                         &:after{bottom: 42%; transform: translate(-50%, 0); left: -10px;}
                     }
                 }
@@ -47,5 +47,17 @@ header{display: flex; flex-direction: row; justify-content: space-between; align
             &.active{transform: translateY(0);}
         }
         .nav-icon{display: block;}
+    }
+}
+
+@media screen and (max-width: 360px){
+    header{
+        nav{
+            ul{padding-bottom: 20px;
+                li{
+                    a{padding: 8px;}
+                }
+            }
+        }
     }
 }
