@@ -98,7 +98,7 @@ html { font-family: 'Inter UI', sans-serif; }
 	}
 
 h1{.inter(900); font-size: 24px;}
-section.hero-section{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: calc(100vh - 75px);
+section.hero-section{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; min-height: calc(100vh - 75px);
     .hero-text{display: flex; flex-direction: row; justify-content: center; align-items: center;
         h1{color: @teal; .inter(700); font-size: 64px; text-align: center; flex: 1; flex-shrink: 0; background-image: linear-gradient(180deg,transparent 70%,rgba(51,213,195,.15) 0)}
         span.hero-text-divider{width: 2px; height: 125px; background: @teal; margin: 0 40px; animation: cursor-blink .85s infinite alternate;}
@@ -112,9 +112,12 @@ section.hero-section{display: flex; flex-direction: row; justify-content: center
             }
         }
     }
-    &.inner-page{
-        .hero-text{
-            h2{.inter(900); font-size: 34px; font-style: normal; text-transform: uppercase; letter-spacing: 4px; color: @blue;}
+    &.inner-page{padding-bottom: 60px;
+        .hero-text{flex-direction: column; justify-content: flex-start; align-items: center;
+            .undraw-container{min-width: 175px; max-width: 25%; 
+                svg{max-width: 100%; max-height: 250px;}
+            } 
+            h2{.inter(900); font-size: 52px; font-style: normal; text-transform: uppercase; letter-spacing: 4px; color: @blue;}
         }
     }
 }
@@ -148,6 +151,11 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
             h2{font-size: 16px;
                 span.hero-dates{font-size: 14px;}
                 a.hero-cta{font-size: 16px;}
+            }
+        }
+        &.inner-page{
+            .hero-text{
+                h2{font-size: 38px;}
             }
         }
     }
