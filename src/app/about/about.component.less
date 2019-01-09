@@ -1,6 +1,6 @@
 @import url("../../styles.less");
 
-.team-container{display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; width: 100%; flex: 1; flex-wrap: wrap; padding: 80px 0;
+.team-container{display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 100%; flex: 1; flex-wrap: wrap; padding: 80px 0;
     .team-member-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex-basis: calc(50% - 100px); max-width: calc(50% - 100px); margin: 0 50px;
         .team-member-profile-pic{width: 175px; height: 175px; border-radius: 100%; overflow: hidden; background: #000; border: 4px solid @teal; margin: 0 0 20px 0; position: relative;
             img{width: 100%; height: 100%; filter: saturate(0%) brightness(.5) contrast(101%); position: absolute;  z-index: 100;}
@@ -8,12 +8,39 @@
         }
         h2.team-member-name{.inter(900); font-size: 24px; color: @green; background-image: linear-gradient(180deg,transparent 75%,rgba(51,213,195,.15) 0); padding: 0 8px; margin: 0 0 8px 0;}
         span.team-member-role{.inter(500); font-size: 12px; background: @darkest-grey; padding: 5px 8px; border-radius: 24px; color: @teal; margin: 0 0 25px 0;}
-        p.team-member-description{width: 80%; .inter(500); font-size: 16px; line-height: 1.5; color: @white-green; padding-bottom: 20px;}
+        p.team-member-description{width: 80%; max-width: 525px; .inter(500); font-size: 16px; line-height: 1.5; color: @white-green; padding-bottom: 20px;}
+        &:first-of-type{
+            .team-member-profile-pic{
+                img{filter: saturate(0%) brightness(.7) contrast(101%);}
+            }
+        }
     }
+}
+
+.history-container{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; flex: 1; flex-wrap: wrap; padding: 60px 0;
+    .history-pic-container-large{width: 100%; max-width: 1000px; height: 100%; min-height: 1px;
+        .history-pic-container{width: 100%; height: 0; padding-bottom: 56.25%; border-radius: 12px; position: relative; overflow: hidden;
+            img{width: 100%; height: auto; position: absolute; top: 50%; left: 0; transform: translateY(-50%); filter: saturate(0%) brightness(.5); z-index: 100;}
+            .post-image-overlay{width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 101; background: @teal; opacity: .5; mix-blend-mode: multiply; }
+        }
+    }
+    p.history-description{width: 65%; max-width: 768px; .inter(500); font-size: 18px; line-height: 1.6; color: @white-blue; padding: 60px 0;}
 }
 
 @media screen and (max-width: 960px){
     .team-container{flex-direction: column;
         .team-member-container{flex-basis: 100%; max-width: 100%; margin: 25px 0;}
+    }
+}
+
+@media screen and (max-width: 768px){
+    .history-container{
+        p.history-description{width: 80%;}
+    }
+}
+
+@media screen and (max-width: 450px){
+    .history-container{
+        p.history-description{width: 100%;}
     }
 }
