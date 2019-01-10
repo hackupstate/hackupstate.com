@@ -7,7 +7,7 @@
                 span.calendar-day{.inter(700); font-size: 24px; color: lighten(@white-blue, 5%);}
                 span.calendar-month-short{.inter(500); font-size: 12px; text-transform: uppercase; padding-top: 3px;}
             }
-            .calendar-event-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 100%; padding: 10px; background: @teal; border-radius: 5px;
+            .calendar-event-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 100%; padding: 10px; background: @teal; border-radius: 6px;
                 .calendar-event-icon{display: flex; justify-content: center; align-items: center; width: 60px; height: 100%; margin-right: 10px;
                     img{max-width: 55%; filter: saturate(0%) brightness(.05) contrast(125%);}
                 }
@@ -21,8 +21,8 @@
     }
 }
 
-.past-events-container{
-    .past-event-container{
+.past-events-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; width: 100%; height: 100%; flex: 1; flex-wrap: wrap; padding: 60px 0;
+    .past-event-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; background: @white-blue; width: calc(33.33% - 50px); flex-basis: calc(33.33% - 50px); border-radius: 9px; margin: 25px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important;
         .past-event-logo-container{
             img{}
         }
