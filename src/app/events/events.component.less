@@ -9,7 +9,7 @@
             }
             .calendar-event-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 60px; background: @teal; border-radius: 5px;
                 .calendar-event-icon{display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; margin-right: 10px;
-                    img{max-width: 55%; filter: saturate(0%) brightness(.4) contrast(125%);}
+                    img{max-width: 55%; filter: saturate(0%) brightness(.05) contrast(125%);}
                 }
                 .calendar-event-info-container{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 60px;;
                     span.calendar-event-title{.inter(700); font-size: 16px; color: @darkest-grey;}
@@ -37,5 +37,10 @@
 
 
 @media screen and (max-width: 620px){
+    .upcoming-events-container{
+        .calendar-container{padding: 30px 10px 30px 0;
+
+        }
+    }
     a.event-sign-up-button{display: none !important;}
 }
