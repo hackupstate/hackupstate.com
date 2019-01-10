@@ -1,8 +1,23 @@
 @import url("../../styles.less");
 
 .upcoming-events-container{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 60px 0;
-    .calendar-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%; min-height: 300px; background: rgba(10, 10, 21, .8); border-radius: 9px;
-        .single-calendar-date-container{}
+    .calendar-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; flex-grow: 0; flex-shrink: 0; width: 100%; min-height: 300px; max-height: 450px; padding: 30px 20px; background: rgba(10, 10, 21, .8); border-radius: 9px; overflow-y: auto; position: relative;
+        .single-calendar-date-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex: 1; flex-shrink: 0; width: calc(100% - 20px); height: 60px; margin: 10px 0;
+            .single-calendar-date{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 60px; height: 100%; margin-right: 20px; position: sticky; top: 0;
+                span.calendar-day{.inter(700); font-size: 24px; color: lighten(@white-blue, 5%);}
+                span.calendar-month-short{.inter(500); font-size: 12px; text-transform: uppercase; padding-top: 3px;}
+            }
+            .calendar-event-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 60px; background: @teal; border-radius: 5px;
+                .calendar-event-icon{display: flex; justify-content: center; align-items: center; width: 60px; height: 60px; margin-right: 10px;
+                    img{max-width: 55%; filter: saturate(0%) brightness(.4) contrast(125%);}
+                }
+                .calendar-event-info-container{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 60px;;
+                    span.calendar-event-title{.inter(700); font-size: 16px; color: @darkest-grey;}
+                    span.calendar-event-time{.inter(400); font-size: 12.5px; color: @darkest-grey; text-transform: uppercase; padding-top: 5px;}
+                }
+                a.event-sign-up-button{display: flex; justify-content: center; align-items: center; .inter(900); font-size: 12.5px; text-transform: uppercase; text-decoration: none; color: @teal; background: @darkest-grey; padding: 6px 12px; border-radius: 24px; margin: 0 20px 0 auto;}
+            }
+        }
     }
 }
 
@@ -17,4 +32,10 @@
         span.past-event-projects{}
         a.past-event-link{}
     }
+}
+
+
+
+@media screen and (max-width: 620px){
+    a.event-sign-up-button{display: none !important;}
 }
