@@ -13,8 +13,17 @@
             img{width: 100%; height: auto; position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 100; filter: saturate(0%) brightness(.5);}
             .post-image-overlay{width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 101; background: @teal; opacity: .5; mix-blend-mode: multiply; }
         }
-        h2.post-headline{.inter(700); color: @darkest-grey; font-size: 24px;  line-height: 1.2; padding: 25px 25px 12px 25px;}
-        span.post-byline{.inter(400); color: @dark-grey-blue; font-size: 14px; padding: 0 25px 20px 25px;}
+        h2.post-headline{.inter(900); color: @darkest-grey; font-size: 24px;  line-height: 1.2; padding: 25px 25px 12px 25px;}
+        span.post-byline{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end; .inter(700); color: @dark-grey-blue; font-size: 12.5px; padding: 0 25px 20px 25px;
+            .author-profile-pic{display: inline-block; width: 26px; height: 26px; border-radius: 100%; overflow: hidden; background: #000; border: 2px solid darken(@teal, 25%); margin: 0 10px 0 0; position: relative;
+                img{width: 100%; height: 100%; filter: saturate(0%) brightness(.9) contrast(101%); position: absolute;  z-index: 100;}
+                &.jesse{
+                    img{filter: saturate(0%) brightness(1) contrast(101%);}
+                }
+                &:after{content: ''; width: 100%; height: 100%; background: @blue; opacity: .6; mix-blend-mode: multiply; position: absolute; top: 0; left: 0; z-index: 101;}
+            }
+            span{padding-bottom: 3px;}
+        }
         p.post-teaser{.inter(400); color: @darker-grey; font-size: 16px; line-height: 1.4; padding: 0 25px 40px 25px;}
     }
 }
