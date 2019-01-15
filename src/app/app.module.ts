@@ -13,7 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { JobsComponent } from './jobs/jobs.component';
-
+import { TabViewModule } from 'primeng/tabview';
+import { AccordionModule } from 'primeng/accordion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,8 @@ import { JobsComponent } from './jobs/jobs.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    TabViewModule,
+    AccordionModule,
     routing
   ],
   providers: [],
