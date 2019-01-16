@@ -122,7 +122,7 @@ section.hero-section{display: flex; flex-direction: row; justify-content: center
     }
     &.event-page{flex-direction: column; justify-content: center; padding-bottom: 100px; position: relative; z-index: 4;
         .hero-text{padding-top: 80px;}
-        .event-page-ctas-container{display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 75%; padding: 40px 0 60px 0;
+        .event-page-ctas-container{display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; width: 75%; padding: 40px 0 60px 0;
             a.event-page-cta{display: flex; justify-content: center; align-items: center; flex-shrink: 0; min-width: 125px; height: 40px; padding: 0 25px; background: @teal; color: @darkest-grey; .inter(900); font-size: 18px; font-style: normal; letter-spacing: 1.5px; border-radius: 24px; box-shadow: 0 5px 8px 0 #111; text-transform: uppercase; text-decoration: none; margin-top: 60px; transform: scale(1) translateY(0); will-change: transform; transition: .25s ease-in-out;
                 &:hover{background: darken(@teal, 20%); transform: scale(1.02) translateY(-2px); box-shadow: 0 8px 12px 0 #111; cursor: pointer;}
             }
@@ -177,6 +177,13 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
             .terminal-divider{margin: 40px 0;}
         }
     }
+    .event-page-wrapper{
+        .about-container{
+            .about-card{flex-basis: calc(50% - 25px); margin-bottom: 25px;
+                &:nth-of-type(2n + 0){margin-right: 0;}
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 625px){
@@ -197,4 +204,18 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         }
     }
     section.sub-section{padding: 60px 20px;}
+    section.hero-section.event-page + section{padding: 140px 20px 60px 20px;}
+    .event-page-wrapper{
+        .about-container{
+            .about-card{flex-basis: 100%; margin: 0 0 25px 0;}
+        }
+    }
+}
+
+@media screen and (max-width: 475px){
+    section.hero-section{
+        &.event-page{
+            .event-page-ctas-container{flex-direction: column; justify-content: flex-start; align-items: center; }
+        }
+    }
 }
