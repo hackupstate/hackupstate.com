@@ -4,7 +4,7 @@
     /deep/ p-tabview{
         .ui-tabview{margin-top: 40px;
             &.ui-tabview-left{
-                .ui-tabview-nav{position: sticky; top: 95px;
+                .ui-tabview-nav{position: sticky; top: 95px; z-index: 100;
                     li{background: transparent !important; border: 0px !important; margin-bottom: 12px;
                         &.ui-state-active{background: @darker-grey !important; border: 0px !important; border-radius: 24px;
                             a{color: @teal !important; .inter(700);}
@@ -20,7 +20,7 @@
     /deep/ p-accordion{
         /deep/ p-accordionTab{
             .ui-accordion-header{margin-bottom: 8px;
-                a{background: @darkest-grey; color: @teal; .inter(700); border: none; border-top: 2px solid @teal; border-radius: 5px; padding: 12px 15px; transition: .25s ease-in-out;
+                a{background: @darkest-grey; color: @teal; .inter(700); border: none; border-top: 2px solid @teal; border-radius: 5px; padding: 20px 12px; transition: .25s ease-in-out;
                     &:focus{outline: none;}
                 }
                 &:hover{
@@ -36,5 +36,26 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 625px){
+    .faq-container{
+        /deep/ p-tabview{
+        .ui-tabview{
+            &.ui-tabview-left{
+                .ui-tabview-nav{display: flex; flex-direction: row; justify-content: space-between; align-items: center; float: none !important; height: 60px; width: 100%; background: @teal; border-radius: 9px;  box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; margin-bottom: 40px;
+                    li{display: flex; flex-direction: row; justify-content: center; align-items: center; width: auto; margin: 0px !important;
+                        &.ui-state-active{
+                            a{}
+                        }
+                        &:focus{}
+                        a{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+                    }
+                }
+                .ui-tabview-panels{float: none !important; width: 100%;}
+            }
+        }
+    }
     }
 }
