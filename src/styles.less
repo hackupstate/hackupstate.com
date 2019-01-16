@@ -149,25 +149,41 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
 
 .event-page-wrapper{
     .about-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; width: 100%; flex: 1; margin-top: 40px;
-    .about-card{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; flex-basis: calc(25% - 25px); background: @darker-grey; border-top: 2px solid @teal; margin-right: 25px; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important;
-        &:last-of-type{margin-right: 0;}
-        .undraw-container{display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%; max-height: 200px; padding-bottom: 40px;
-            svg{width: 100%; max-width: 200px; max-height: 200px;}
-        }
-        h2.about-title{.inter(700); font-size: 24px; color: @white-blue; padding: 0 0 20px 0;}
-        p.about-description{width: 100%; .inter(400); font-size: 14px; line-height: 1.6; text-align: left; color: @white; padding: 0 40px 40px 40px; }
-        &:first-of-type{
-            .undraw-container{padding-top: 40px;
-                svg{max-height: 135px;}
+        .about-card{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; flex-basis: calc(25% - 25px); background: @darker-grey; border-top: 2px solid @teal; margin-right: 25px; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important;
+            &:last-of-type{margin-right: 0;}
+            .undraw-container{display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%; max-height: 200px; padding-bottom: 40px;
+                svg{width: 100%; max-width: 200px; max-height: 200px;}
             }
-        }
-        &:nth-of-type(2){
-            .undraw-container{padding-top: 40px;
-                svg{max-height: 135px;}
+            h2.about-title{.inter(700); font-size: 24px; color: @white-blue; padding: 0 0 20px 0;}
+            p.about-description{width: 100%; .inter(400); font-size: 14px; line-height: 1.6; text-align: left; color: @white; padding: 0 40px 40px 40px; }
+            &:first-of-type{
+                .undraw-container{padding-top: 40px;
+                    svg{max-height: 135px;}
+                }
+            }
+            &:nth-of-type(2){
+                .undraw-container{padding-top: 40px;
+                    svg{max-height: 135px;}
+                }
             }
         }
     }
-}
+    .sponsors-container{display: flex; flex-direction: row; justify-content: space-around; align-items: space-between; flex-wrap: wrap; width: 100%; height: 100%; flex: 1; padding: 60px 0;
+        .single-sponsor-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex: 1; flex-basis: calc(25% - 50px); min-width: 225px; min-height: 150px; flex-shrink: 0; flex-grow: 0; background: @white-blue; border-radius: 9px; margin: 0 25px 25px 25px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; overflow: hidden;
+            &.presenting-sponsor{flex-basis: 100%;
+                .single-sponsor-logo-container{width: 100%; height: 250px; max-height: 250px; position: relative;
+                    img{width: 225px; height: 225px; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+                }
+            }
+            .single-sponsor-logo-container{display: flex; justify-content: center; align-items: center; flex: 1; padding: 50px; min-height: 100px; max-height: 200px; overflow: hidden; position: relative;
+                img{width: 85%; height: auto; z-index: 100;}
+            }
+            .hu-sponsor-link-container{display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background: darken(@white-blue, 5%); transition: .25s ease-in-out;
+                a.hu-sponsor-link{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; .inter(900); font-size: 18px; letter-spacing: 1px; color: @darkest-grey; text-transform: uppercase;}
+                &:hover{background: darken(@white-blue, 8%);  cursor: pointer;}
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 960px){
