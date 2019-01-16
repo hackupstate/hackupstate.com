@@ -1,1 +1,40 @@
 @import url("../../styles.less");
+
+.faq-container{margin-top: 40px;
+    /deep/ p-tabview{
+        .ui-tabview{margin-top: 40px;
+            &.ui-tabview-left{
+                .ui-tabview-nav{position: sticky; top: 95px;
+                    li{background: transparent !important; border: 0px !important; margin-bottom: 12px;
+                        &.ui-state-active{background: @darker-grey !important; border: 0px !important; border-radius: 24px;
+                            a{color: @teal !important; .inter(700);}
+                        }
+                        &:focus{outline: none;}
+                        a{display: flex !important; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; color: @darker-grey !important; .inter(700);}
+                    }
+                }
+                .ui-tabview-panels{background: transparent; border: 0px !important; padding-top: 0px !important;}
+            }
+        }
+    }
+    /deep/ p-accordion{
+        /deep/ p-accordionTab{
+            .ui-accordion-header{margin-bottom: 8px;
+                a{background: @darkest-grey; color: @teal; .inter(700); border: none; border-top: 2px solid @teal; border-radius: 5px; padding: 12px 15px; transition: .25s ease-in-out;
+                    &:focus{outline: none;}
+                }
+                &:hover{
+                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border-top: 2px solid @teal !important; cursor: pointer;}
+                }
+                &.ui-state-active{margin-bottom: 0;
+                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border-top: 2px solid @teal !important; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+                }
+            }
+            .ui-accordion-content-wrapper{
+                .ui-accordion-content{background: @white-green; color: @darkest-grey; .inter(500); font-size: 16px; line-height: 1.4; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; margin-bottom: 20px;
+                    a{.inter(900); font-size: 14px; color: @darkest-grey; text-transform: uppercase; background-image: linear-gradient(180deg,transparent 75%, darken(@teal, 15%) 0); padding: 0 2px; margin: 0 3px; transition: .25s ease-in-out;}
+                }
+            }
+        }
+    }
+}
