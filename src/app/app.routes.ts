@@ -16,6 +16,7 @@ import { HuNineComponent } from './events/individual-events/05-hu-nine/hu-nine.c
 import { HuEightComponent } from './events/individual-events/06-hu-eight/hu-eight.component';
 import { HuSevenComponent } from './events/individual-events/07-hu-seven/hu-seven.component';
 import { HuSixComponent } from './events/individual-events/08-hu-six/hu-six.component';
+import { BecomeASponsorComponent } from './sponsors/become-a-sponsor/become-a-sponsor.component';
 
 const routes: Routes = [
 
@@ -101,6 +102,13 @@ const routes: Routes = [
         component: SponsorsComponent,
         data: {
             state: 'sponsors'
+        }
+    },
+    {
+        path: 'become-a-sponsor',
+        component: BecomeASponsorComponent,
+        data: {
+            state: 'become-a-sponsor'
         }
     },
     {
