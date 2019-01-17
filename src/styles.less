@@ -264,6 +264,9 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
                 &:last-of-type{margin-right: 0;}
             }
         }
+        .judges-container{
+            .single-judge-container{flex-basis: calc(33% - 50px); max-width: calc(33% - 50px);}
+        }
     }
 }
 
@@ -287,6 +290,9 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
     .event-page-wrapper{
         .prizes-container{
             .single-prize-container{flex-basis: 100%; margin-right: 0;}
+        }
+        .judges-container{
+            .single-judge-container{flex-basis: calc(50% - 50px); max-width: calc(50% - 50px);}
         }
     }
 }
@@ -313,6 +319,9 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
     .event-page-wrapper{
         .about-container{
             .about-card{flex-basis: 100%; margin: 0 0 25px 0;}
+        }
+        .judges-container{
+            .single-judge-container{flex-basis: 100%; max-width: 100%; margin: 0 0 25px 0;}
         }
     }
 }
