@@ -169,7 +169,7 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         }
     }
     h2.sub-heading-light, h2.sub-heading-dark{.inter(700); font-size: 21px; color: @green; width: 100%; margin: 60px 0 20px 0; position: relative;
-        &:after{content: ''; width: 75px; height: 3px; border-radius: 25px; background: @green; position: absolute; bottom: -5px; left: 0;}
+        &:after{content: ''; width: 35px; height: 3px; border-radius: 25px; background: @green; position: absolute; bottom: -5px; left: 0;}
     }
     h2.sub-heading-dark{color: @darker-grey !important;
         &:after{background: @darker-grey !important;}
@@ -192,8 +192,14 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         }
     }
     .prizes-container{display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; width: 100%; flex: 1;
-        .single-prize-container{display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; flex: 1; flex-basis: calc(50% - 25px); flex-grow: 0; height: 250px; margin: 0 25px 25px 0; background: @darker-grey; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; overflow: hidden;
+        .single-prize-container{display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; flex: 1; flex-basis: calc(50% - 25px); flex-grow: 0; height: 250px; margin: 0 25px 25px 0; background: @darker-grey; border-radius: 9px; position: relative; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; overflow: hidden;
             &:last-of-type{margin-right: 25px;}
+            a.more-info{
+                svg{width: 21px; height: 21px; position: absolute; top: 8px; right: 8px; z-index: 102;
+                    .primary{fill: @teal;}
+                    .secondary{fill: @darker-grey;}
+                }
+            }
             .prize-winner-pic-container{display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 0; width: 175px; height: 250px; min-height: 1px; overflow: hidden; position: relative;
                 img{width: auto; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%); object-fit: cover;  filter: saturate(0%) brightness(.6) contrast(101%);}
                 &:after{content: ''; width: 100%; height: 100%; background: @blue; opacity: .6; mix-blend-mode: multiply; position: absolute; top: 0; left: 0; z-index: 101;}
@@ -203,9 +209,9 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
                     h3.prize-title{.inter(900); font-size: 18px; color: lighten(@darker-grey, 25%); text-transform: uppercase; padding-bottom: 8px;}
                     h4.winning-team-name{.inter(700); font-size: 24px; color: @white-blue; line-height: 1.1;}
                 }
-                .prize-info-bottom-container{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; width: 100%; background: darken(@darker-grey, 3%); padding: 25px 20px;
-                    .prize-details-view-container{display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 100%;
-                        span.prize-details{.inter(900); font-size: 24px; color: @teal; }
+                .prize-info-bottom-container{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; width: 100%; background: darken(@darker-grey, 3%); padding: 25px 0 0 0px;
+                    .prize-details-view-container{display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; height: 100%; padding: 0 20px 25px 20px;
+                        span.prize-details{.inter(900); font-size: 21px; color: @teal; }
                         a.view-project{display: flex; flex-direction: row; justify-content: center; align-items: center; .inter(900); font-size: 16px; color: @darkest-grey; background: @teal; text-transform: uppercase; letter-spacing: 1px; padding: 6px 18px; border-radius: 24px;
                             svg{width: 16px; height: 16px; margin-left: 8px;
                                 .primary{fill: @darker-grey;}
@@ -213,8 +219,22 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
                             }
                         }
                     }
+                    .prize-attribution-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; background: #0d0d10; color: @teal; padding: 5px 20px; width: 100%; font-size: 12px; .inter(400);
+                        a{.inter(700); color: @teal;}
+                    }
                 }
             }
+        }
+    }
+    .judges-container{display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 100%; flex: 1; flex-wrap: wrap; padding: 80px 0;
+        .single-judge-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex-basis: calc(50% - 100px); max-width: calc(50% - 100px); background: @darkest-grey; border-top: 2px solid @teal; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; margin: 0 50px;
+            .judge-profile-pic{width: 175px; height: 175px; border-radius: 100%; overflow: hidden; background: #000; border: 4px solid @teal; margin: 25px 0 20px 0; position: relative;
+                img{width: 100%; height: 100%; filter: saturate(0%) brightness(.65) contrast(101%); position: absolute;  z-index: 100;}
+                &:after{content: ''; width: 100%; height: 100%; background: @blue; opacity: .6; mix-blend-mode: multiply; position: absolute; top: 0; left: 0; z-index: 101;}
+            }
+            h2.judge-name{.inter(900); font-size: 24px; color: @green; background-image: linear-gradient(180deg,transparent 75%,rgba(51,213,195,.15) 0); padding: 0 8px; margin: 0 0 8px 0;}
+            span.judge-role{.inter(500); font-size: 12px; background: @darkest-grey; padding: 5px 8px; border-radius: 24px; color: @teal; margin: 0 0 25px 0;}
+            p.team-member-description{width: 80%; max-width: 525px; .inter(500); font-size: 16px; line-height: 1.5; color: @darker-grey; padding-bottom: 25px;}
         }
     }
 }
