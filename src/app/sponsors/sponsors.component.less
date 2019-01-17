@@ -3,13 +3,13 @@
 h2{.inter(500); font-size: 28px; line-height: 1.2; font-style: italic; color: @darkest-grey; padding: 40px 0;}
 
 .sponsors-container{display: flex; flex-direction: row; justify-content: space-around; align-items: space-between; flex-wrap: wrap; width: 100%; height: 100%; flex: 1; padding: 20px 0 60px 0;
-    .single-sponsor-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex: 1; flex-basis: calc(25% - 50px); min-width: 225px; min-height: 150px; flex-shrink: 0; background: @white-blue; border-radius: 9px; margin: 0 25px 25px 25px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; overflow: hidden;
+    .single-sponsor-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex: 1; flex-basis: calc(25% - 50px); min-width: 225px; min-height: 150px; flex-shrink: 0; background: #fff; border-radius: 9px; margin: 0 25px 25px 25px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; overflow: hidden;
         .single-sponsor-logo-container{display: flex; justify-content: center; align-items: center; flex: 1; padding: 50px; min-height: 100px; max-height: 200px; overflow: hidden; position: relative;
-            img{width: 85%; height: auto; z-index: 100;}
+            img{width: 85%; height: auto; z-index: 100; position: relative;}
         }
-        .hu-sponsor-link-container{display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background: darken(@white-blue, 5%); transition: .25s ease-in-out;
+        .hu-sponsor-link-container{display: flex; justify-content: center; align-items: center; width: 100%; height: 75px; background: @green; transition: .25s ease-in-out;
             a.hu-sponsor-link{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; .inter(900); font-size: 18px; letter-spacing: 1px; color: @darkest-grey; text-transform: uppercase;}
-            &:hover{background: darken(@white-blue, 8%);  cursor: pointer;}
+            &:hover{background: darken(@green, 8%);  cursor: pointer;}
         }
     }
 
