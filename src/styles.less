@@ -171,8 +171,8 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
     h2.sub-heading-light, h2.sub-heading-dark{.inter(700); font-size: 21px; color: @green; width: 100%; margin: 60px 0 20px 0; position: relative;
         &:after{content: ''; width: 35px; height: 3px; border-radius: 25px; background: @green; position: absolute; bottom: -5px; left: 0;}
     }
-    h2.sub-heading-dark{color: @darker-grey !important;
-        &:after{background: @darker-grey !important;}
+    h2.sub-heading-dark{color: @darkest-grey !important;
+        &:after{background: @darkest-grey !important;}
     }
     .sponsors-container{display: flex; flex-direction: row; justify-content: space-around; align-items: space-between; flex-wrap: wrap; width: 100%; height: 100%; flex: 1; padding: 20px 0 60px 0;
         h2.sub-heading-light{margin: 0 0 40px 0;}
@@ -227,18 +227,33 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         }
     }
     .judges-container{display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 100%; flex: 1; flex-wrap: wrap; padding: 80px 0;
-        .single-judge-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex-basis: calc(50% - 100px); max-width: calc(50% - 100px); background: @darkest-grey; border-top: 2px solid @teal; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; margin: 0 50px;
-            .judge-profile-pic{width: 175px; height: 175px; border-radius: 100%; overflow: hidden; background: #000; border: 4px solid @teal; margin: 25px 0 20px 0; position: relative;
+        .single-judge-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex-basis: calc(25% - 50px); max-width: calc(25% - 50px); background: @white-blue; border-top: 2px solid green; border-radius: 9px; box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important; margin: 0 25px 25px 25px;
+            .judge-profile-pic{width: 175px; height: 175px; border-radius: 100%; overflow: hidden; background: #000; border: 4px solid lighten(@darker-grey, 55%); margin: 25px 0 20px 0; position: relative;
                 img{width: 100%; height: 100%; filter: saturate(0%) brightness(.65) contrast(101%); position: absolute;  z-index: 100;}
                 &:after{content: ''; width: 100%; height: 100%; background: @blue; opacity: .6; mix-blend-mode: multiply; position: absolute; top: 0; left: 0; z-index: 101;}
             }
-            h2.judge-name{.inter(900); font-size: 24px; color: @green; background-image: linear-gradient(180deg,transparent 75%,rgba(51,213,195,.15) 0); padding: 0 8px; margin: 0 0 8px 0;}
-            span.judge-role{.inter(500); font-size: 12px; background: @darkest-grey; padding: 5px 8px; border-radius: 24px; color: @teal; margin: 0 0 25px 0;}
-            p.team-member-description{width: 80%; max-width: 525px; .inter(500); font-size: 16px; line-height: 1.5; color: @darker-grey; padding-bottom: 25px;}
+            h2.judge-name{.inter(900); font-size: 24px; color: @darkest-grey; padding: 0 8px; margin: 0 0 8px 0;}
+            span.judge-role{.inter(500); font-size: 12px; background: @darkest-grey; padding: 5px 10px; border-radius: 24px; color: @green; margin: 0 0 25px 0;}
+            .judge-links{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%;
+                a.linkedIn{color: @darker-grey; .inter(700); font-size: 14px; background-image: linear-gradient(180deg,transparent 70%, lighten(@darker-grey, 55%) 0); padding: 0 3px; margin-bottom: 25px;
+                    svg{width: 21px; height: 13px; padding-left: 8px;
+                        .primary{fill: @darker-grey;}
+                        .secondary{fill: @green;}
+                    }
+                }
+                a.employer{color: @darker-grey; .inter(700); font-size: 14px; background-image: linear-gradient(180deg,transparent 70%, lighten(@darker-grey, 55%) 0); padding: 0 3px; margin-bottom: 12px;
+                    svg{width: 21px; height: 13px; padding-left: 8px;
+                        .primary{fill: @darker-grey;}
+                        .secondary{fill: @green;}
+                    }
+                }
+            }
         }
     }
 }
 
+.drip-tab .drip-header a.drip-toggle h2{.inter(900) !important; font-size: 14px !important; text-transform: uppercase !important; color: @darkest-grey !important;}
+.drip-tab .drip-header .drip-arrow svg polygon{fill: @darkest-grey !important;}
 @media screen and (max-width: 1160px){
     .event-page-wrapper{
         .prizes-container{
