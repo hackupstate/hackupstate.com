@@ -250,6 +250,12 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
             }
         }
     }
+    .judging-criteria-container{display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; width: 100%; margin-top: 40px;
+        .judging-criteria{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 1; flex-basis: calc(33% - 25px); margin-right: 25px; border: 2px solid @teal; border-top: none; padding: 25px;
+            h2.criteria-heading{.inter(900); font-size: 24px; line-height: 1.2; color: @green; padding-bottom: 20px; text-align: center;}
+            p.criteria-description{.inter(500); font-size: 16px; line-height: 1.6; color: @white-green;}
+        }
+    }
 }
 
 .drip-tab .drip-header a.drip-toggle h2{.inter(900) !important; font-size: 14px !important; text-transform: uppercase !important; color: @darkest-grey !important;}
@@ -325,7 +331,13 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
         }
     }
 }
-
+@media screen and (max-width: 540px){
+    .event-page-wrapper{
+        .judging-criteria-container{
+            .judging-criteria{flex-basis: 100%; margin-right: 0;}
+        }
+    }
+}
 @media screen and (max-width: 475px){
     section.hero-section{
         &.event-page{
