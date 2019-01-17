@@ -226,6 +226,7 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
                 .prize-winner-pic-container{width: 100%; 
                     img{width: 100%; height: auto; top: 50%; left: 0; transform: translateY(-50%); }
                 }
+                &:last-of-type{margin-right: 0;}
             }
         }
     }
@@ -250,7 +251,7 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
 @media screen and (max-width: 867px){
     .event-page-wrapper{
         .prizes-container{
-            .single-prize-container{flex-basis: (100%); margin-right: 0;}
+            .single-prize-container{flex-basis: 100%; margin-right: 0;}
         }
     }
 }
