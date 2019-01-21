@@ -135,7 +135,7 @@ section.hero-section{display: flex; flex-direction: row; justify-content: center
     }
 }
 
-section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 100vh; padding: 60px 40px; background-color: #1c1c27; background-image: linear-gradient(300deg, #1c1c27 -25%, #20383e 65%, #257E79, #5fb791 175%);
+section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 50vh; padding: 60px 40px; background-color: #1c1c27; background-image: linear-gradient(300deg, #1c1c27 -25%, #20383e 65%, #257E79, #5fb791 175%);
     &.alt-bg{background: @darker-grey;
         h1{color: @teal;
             &:after{background: @teal;}
@@ -266,6 +266,15 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
 
 .drip-tab .drip-header a.drip-toggle h2{.inter(900) !important; font-size: 14px !important; text-transform: uppercase !important; color: @darkest-grey !important;}
 .drip-tab .drip-header .drip-arrow svg polygon{fill: @darkest-grey !important;}
+.drip-tab .drip-content{background: @darkest-grey !important;}
+#drip-37801 .drip-content .drip-panel h3{color: @teal !important;}
+.drip-tab .drip-content .drip-panel{background: @darkest-grey !important;}
+#drip-37801 #drip-form-37801 .drip-text-field{background-color: @white-blue !important; color: @darkest-grey !important; .inter(700);}
+#drip-37801 #drip-form-37801 .drip-text-field::placeholder{color: lighten(@darker-grey, 15%) !important; .inter(700);}
+.drip-tab dl dt{color: @darkest-grey !important;}
+#drip-37801 .drip-content .drip-panel .drip-scroll form .form-controls input.drip-submit-button{background-color: @teal !important; color: @darkest-grey !important;}
+.drip-tab .drip-content .drip-description{color: @white-green !important;}
+
 @media screen and (max-width: 1160px){
     .event-page-wrapper{
         .prizes-container{
