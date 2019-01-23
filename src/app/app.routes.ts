@@ -17,6 +17,8 @@ import { HuEightComponent } from './events/individual-events/06-hu-eight/hu-eigh
 import { HuSevenComponent } from './events/individual-events/07-hu-seven/hu-seven.component';
 import { HuSixComponent } from './events/individual-events/08-hu-six/hu-six.component';
 import { BecomeASponsorComponent } from './sponsors/become-a-sponsor/become-a-sponsor.component';
+import { CodeOfConductComponent } from './docs/code-of-conduct/code-of-conduct.component';
+import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
 
@@ -109,6 +111,20 @@ const routes: Routes = [
         component: BecomeASponsorComponent,
         data: {
             state: 'become-a-sponsor'
+        }
+    },
+    {
+        path: 'conduct',
+        component: CodeOfConductComponent,
+        data: {
+            state: 'conduct'
+        }
+    },
+    {
+        path: 'privacy',
+        component: PrivacyPolicyComponent,
+        data: {
+            state: 'privacy'
         }
     },
     {
