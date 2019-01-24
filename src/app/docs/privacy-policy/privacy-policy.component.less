@@ -1,1 +1,22 @@
 @import url("../../../styles.less");
+
+.document-wrapper{background: rgba(255, 255, 255, .95); padding: 20px; border-radius: 9px;
+    h2{.inter(500); font-size: 28px; line-height: 1.2; font-style: italic; color: @darkest-grey; padding: 40px 0;}
+
+    p{.inter(500); font-size: 18px; line-height: 1.5; color: @darkest-grey; padding: 20px 0; max-width: 65%;
+        a{display: inline-block; text-decoration: none; .inter(900); font-size: 14px; color: @darkest-grey; text-transform: uppercase; background-image: linear-gradient(180deg,transparent 70%, darken(@teal, 15%) 0); padding: 0 2px; transition: .25s ease-in-out;
+            &:hover{background-image: linear-gradient(180deg,transparent 70%, darken(@teal, 25%) 0); cursor: pointer;}
+        }
+    }
+
+    ol{
+        li{list-style: circle; .inter(900); font-size: 18px; color: @darkest-grey; margin-left: 25px; padding: 8px 0; 
+            a{display: inline-block; .inter(900); font-size: 18px; color: @darkest-grey; align-self: flex-end; text-transform: uppercase; padding: 0 2px; margin: 0 25px 10px 0; transition: .25s ease-in-out;
+                &:hover{cursor: pointer;}
+            }
+        }
+    }
+    ul{
+        li{list-style: circle; .inter(900); font-size: 18px; color: @darkest-grey; margin-left: 25px; padding: 8px 0;} 
+    }
+}

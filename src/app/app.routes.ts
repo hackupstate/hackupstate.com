@@ -165,4 +165,6 @@ const routes: Routes = [
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {
     onSameUrlNavigation: 'reload',
     scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 95] // [x, y]
 });
