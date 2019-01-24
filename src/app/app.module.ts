@@ -27,6 +27,7 @@ import { BecomeASponsorComponent } from './sponsors/become-a-sponsor/become-a-sp
 import { DocsComponent } from './docs/docs.component';
 import { CodeOfConductComponent } from './docs/code-of-conduct/code-of-conduct.component';
 import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.component';
+import { WaiverComponent } from './waiver/waiver.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.com
     BecomeASponsorComponent,
     DocsComponent,
     CodeOfConductComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    WaiverComponent
   ],
   imports: [
     BrowserModule,
