@@ -20,6 +20,7 @@ import { BecomeASponsorComponent } from './sponsors/become-a-sponsor/become-a-sp
 import { CodeOfConductComponent } from './docs/code-of-conduct/code-of-conduct.component';
 import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.component';
 import { WaiverComponent } from './waiver/waiver.component';
+import { OpenDataComponent } from './open-data/open-data.component';
 
 const routes: Routes = [
 
@@ -161,6 +162,13 @@ const routes: Routes = [
         component: WaiverComponent,
         data: {
             state: 'waiver'
+        }
+    },
+    {
+        path: 'open-data',
+        component: OpenDataComponent,
+        data: {
+            state: 'open-data'
         }
     },
     {
