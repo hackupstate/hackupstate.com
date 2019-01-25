@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hu-thirteen.component.less']
 })
 export class HuThirteenComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
