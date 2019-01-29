@@ -214,8 +214,8 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
                     .secondary{fill: @darker-grey;}
                 }
             }
-            .prize-winner-pic-container{display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 0; width: 175px; height: 250px; min-height: 1px; overflow: hidden; position: relative;
-                img{width: auto; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%); object-fit: cover;  filter: saturate(0%) brightness(.6) contrast(101%);}
+            .prize-winner-pic-container{display: flex; flex-direction: column; flex-shrink: 0; flex-grow: 0; width: 225px; height: 250px; min-height: 1px; overflow: hidden; position: relative;
+                img{width: 100%; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%); object-fit: cover;  filter: saturate(0%) brightness(.6) contrast(101%);}
                 &:after{content: ''; width: 100%; height: 100%; background: @blue; opacity: .6; mix-blend-mode: multiply; position: absolute; top: 0; left: 0; z-index: 101;}
             }
             .prize-info-container{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; width: 100%; height: 100%; color: @white-blue;
@@ -322,6 +322,14 @@ section.sub-section{display: flex; flex-direction: column; justify-content: flex
 }
 
 @media screen and (max-width: 867px){
+    body{background: #21494B !important;}
+    section.hero-section{background: rgb(2,2,12);
+background: -moz-linear-gradient(0deg, rgba(2,2,12,1) 35%, rgba(29,58,65,1) 80%, rgba(33,73,75,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(2,2,12,1) 35%, rgba(29,58,65,1) 80%, rgba(33,73,75,1) 100%);
+background: linear-gradient(0deg, rgba(2,2,12,1) 35%, rgba(29,58,65,1) 80%, rgba(33,73,75,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#02020c",endColorstr="#21494b",GradientType=1);
+
+    }
     .event-page-wrapper{
         .prizes-container{
             .single-prize-container{flex-basis: 100%; margin-right: 0;}
