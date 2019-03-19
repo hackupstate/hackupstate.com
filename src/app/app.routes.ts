@@ -21,6 +21,7 @@ import { CodeOfConductComponent } from './docs/code-of-conduct/code-of-conduct.c
 import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.component';
 import { WaiverComponent } from './waiver/waiver.component';
 import { OpenDataComponent } from './open-data/open-data.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 const routes: Routes = [
 
@@ -120,6 +121,13 @@ const routes: Routes = [
         component: CodeOfConductComponent,
         data: {
             state: 'conduct'
+        }
+    },
+    {
+        path: 'thanks',
+        component: ThanksComponent,
+        data: {
+            state: 'thanks'
         }
     },
     {

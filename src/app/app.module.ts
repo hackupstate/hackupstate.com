@@ -29,6 +29,7 @@ import { CodeOfConductComponent } from './docs/code-of-conduct/code-of-conduct.c
 import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.component';
 import { WaiverComponent } from './waiver/waiver.component';
 import { OpenDataComponent } from './open-data/open-data.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { OpenDataComponent } from './open-data/open-data.component';
     CodeOfConductComponent,
     PrivacyPolicyComponent,
     WaiverComponent,
-    OpenDataComponent
+    OpenDataComponent,
+    ThanksComponent
   ],
   imports: [
     BrowserModule,
