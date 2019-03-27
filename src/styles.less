@@ -148,14 +148,8 @@ h2.sub-heading-light, h2.sub-heading-dark{.inter(700); font-size: 21px; color: @
 }
 
 section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 50vh; padding: 80px 40px; background-color: #02020C; 
-    &.alt-bg{
-        h1{color: @teal;
-            &:after{background: #126a60;}
-        }
-    }
-
     h1{color: @teal; text-transform: uppercase; letter-spacing: 1px; position: relative; margin-bottom: 40px;
-        &:after{content: ''; width: calc(100vw - 86px); height: 2px; border-radius: 25px; background: #126a60; position: absolute; bottom: -10px; left: 0;}
+        &:after{content: ''; width: calc(100vw - 86px); height: 2px; border-radius: 25px; background: linear-gradient(to right, #126a60, #000); position: absolute; bottom: -10px; left: 0;}
     }
 }
 
