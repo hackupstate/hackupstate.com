@@ -20,18 +20,18 @@
     /deep/ p-accordion{
         /deep/ p-accordionTab{
             .ui-accordion-header{margin-bottom: 8px;
-                a{background: @darkest-grey; color: @teal; .inter(700); border: none; border-top: 2px solid @teal; border-radius: 5px; padding: 20px 12px; transition: .25s ease-in-out;
+                a{background: linear-gradient(to right, #1b1b24, #0a0a15); color: @teal; .inter(700); border: none; border-radius: 5px; padding: 20px 12px; transition: .25s ease-in-out;
                     &:focus{outline: none;}
                 }
                 &:hover{
-                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border-top: 2px solid @teal !important; cursor: pointer;}
+                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border: none !important; border-top: 2px solid @teal !important; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; cursor: pointer;}
                 }
                 &.ui-state-active{margin-bottom: 0;
-                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border-top: 2px solid @teal !important; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+                    a{background-color: @darkest-grey !important; color: @teal !important; border-color: @teal !important; border: none !important; border-top: 2px solid @teal !important; border-left: 2px solid @teal !important; border-right: 2px solid @teal !important; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
                 }
             }
             .ui-accordion-content-wrapper{
-                .ui-accordion-content{background: @white-green; color: @darkest-grey; .inter(500); font-size: 16px; line-height: 1.4; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; margin-bottom: 20px; padding: 25px 20px;
+                .ui-accordion-content{background: @white-blue; color: @darkest-grey; .inter(500); font-size: 16px; line-height: 1.4; border-left: 2px solid @teal !important; border-right: 2px solid @teal !important; border-bottom: 2px solid @teal !important; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; margin-bottom: 20px; padding: 25px 20px;
                     a{.inter(900); font-size: 14px; color: @darkest-grey; text-transform: uppercase; background-image: linear-gradient(180deg,transparent 75%, darken(@teal, 15%) 0); padding: 0 2px; margin: 0 3px; transition: .25s ease-in-out;}
                 }
             }
