@@ -34,7 +34,7 @@ header{display: flex; flex-direction: row; justify-content: space-between; align
 }
 
 @media screen and (max-width: 960px){
-    header{
+    header{position: fixed; top: 0; left: 0; background: #03030F; border-color: darken(@darker-grey, 3%);
         nav{flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100vh; background-color: @darkest-grey; position: fixed; top: 0; right: 0; transform: translateY(-100%); transition: .25s ease-in-out; z-index: 10000;
             ul{flex-direction: column; justify-content: flex-end; align-items: center; height: 90%; padding-bottom: 40px;
                 li{
