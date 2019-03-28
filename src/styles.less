@@ -101,7 +101,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#02020c",endCo
 		color: @white-blue;
 	}
 
-h1{.inter(900); font-size: 24px;}
+h1{.inter(900); font-size: 48px;}
 section.hero-section{display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; min-height: calc(100vh - 75px); padding-bottom: 60px;
     .hero-text{display: flex; flex-direction: row; justify-content: center; align-items: center;
         h1{color: @teal; .inter(700); font-size: 64px; text-align: center; flex: 1; flex-shrink: 0; background-image: linear-gradient(180deg,transparent 0%,rgba(51,213,195,.15) 0); border-radius: 9px; padding: 5px;  box-shadow: 0 15px 35px 0 rgba(3,3,10,.22),0 5px 15px rgba(0,0,0,.56) !important;}
@@ -143,13 +143,13 @@ section.hero-section{display: flex; flex-direction: row; justify-content: center
     }
 }
 
-h2.sub-heading-light, h2.sub-heading-dark{.inter(700); font-size: 21px; color: @green; width: 100%; margin: 0px 0 20px 0; position: relative;
+h2.sub-heading-light, h2.sub-heading-dark{.inter(700); font-size: 21px; color: @teal; width: 100%; margin: 0px 0 20px 0; position: relative;
 
 }
 
-section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 50vh; padding: 80px 40px; background-color: #02020C; 
-    h1{color: @teal; text-transform: uppercase; letter-spacing: 1px; position: relative; margin-bottom: 40px;
-        &:after{content: ''; width: calc(100vw - 86px); height: 2px; border-radius: 25px; background: linear-gradient(to right, #126a60, #000); position: absolute; bottom: -10px; left: 0;}
+section.sub-section{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 50vh; padding: 80px 40px; background-color: #03030e; 
+    h1{color: transparent; -webkit-text-stroke: 1px @teal; text-transform: uppercase; letter-spacing: 1px; position: relative; margin-bottom: 40px;
+        &:after{content: ''; width: calc(100vw - 86px); height: 2px; border-radius: 25px; background: radial-gradient(#126a60, transparent); position: absolute; bottom: -10px; left: 0;}
     }
 }
 
@@ -367,7 +367,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#02020c",endCo
             }
         }
     }
-    section.sub-section{padding: 60px 20px;}
+    section.sub-section{padding: 60px 20px;
+        h1{font-size: 34px;}
+    }
     section.hero-section.event-page + section{padding: 140px 20px 60px 20px;}
     .event-page-wrapper{
         .about-container{
@@ -376,6 +378,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#02020c",endCo
         .judges-container{
             .single-judge-container{flex-basis: 100%; max-width: 100%; margin: 0 0 25px 0;}
         }
+    }
+    .event-page-wrapper{
+    .sponsors-container{
+        .single-sponsor-container{flex-basis: calc(100% - 0px); margin: 0 0 25px 0;
+            &.presenting-sponsor{
+                &.scale-up{
+                    .single-sponsor-logo-container{
+                        img{transform: translate(-50%, -50%) scale(1);}
+                    }
+                }
+            }
+        }
+    }
     }
 }
 @media screen and (max-width: 540px){
