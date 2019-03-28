@@ -374,7 +374,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#02020c",endCo
         }
     }
     section.sub-section{padding: 60px 20px;
-        h1{font-size: 34px;}
+        h1{font-size: 34px;
+            &:after{width: calc(100vw - 46px);}
+        }
     }
     section.hero-section.event-page + section{padding: 140px 20px 60px 20px;}
     .event-page-wrapper{
