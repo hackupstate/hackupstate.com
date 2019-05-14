@@ -39,7 +39,7 @@
                     p.calendar-event-description{.inter(500);}
                 }
                 .calendar-event-time{display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
-                    svg{width: 14px; height: 14px; border: 2px solid @dark-grey-blue; border-radius: 100%; opacity: .85; margin-right: 8px; flex-shrink: 0; flex-grow: 1;
+                    svg{width: 14px; height: 14px; border: 2px solid @dark-grey-blue; border-radius: 100%; opacity: .85; margin-right: 8px; flex-shrink: 0; flex-grow: 0;
                         .primary{fill: transparent;}
                         .secondary{fill: @darkest-grey;}
                     }
@@ -155,7 +155,13 @@
     }
     span.calendar-event-title{font-size: 15px !important;}
     span.calendar-event-time{font-size: 10px !important;
-        svg{width: 20px !important; height: 15px !important;}
+        svg{width: 14px !important; height: 14px !important;}
         .time{padding-bottom: 1px !important;}
+    }
+}
+
+@media screen and (max-width: 350px){
+    .overall-calendar-container{
+        .calendar-event-icon{display: none;}
     }
 }
