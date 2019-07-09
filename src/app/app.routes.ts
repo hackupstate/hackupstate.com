@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { HuFourteenComponent } from './events/individual-events/09-hu-fourteen/hu-fourteen.component';
 import { HuThirteenComponent } from './events/individual-events/01-hu-thirteen/hu-thirteen.component';
 import { HuTwelveComponent } from './events/individual-events/02-hu-twelve/hu-twelve.component';
 import { HuElevenComponent } from './events/individual-events/03-hu-eleven/hu-eleven.component';
@@ -44,6 +45,13 @@ const routes: Routes = [
         component: EventsComponent,
         data: {
             state: 'events'
+        }
+    },
+    {
+        path: 'events/xiv',
+        component: HuFourteenComponent,
+        data: {
+            state: 'events/xiv'
         }
     },
     {

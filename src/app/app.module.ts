@@ -15,6 +15,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { TabViewModule } from 'primeng/tabview';
 import { AccordionModule } from 'primeng/accordion';
+import { HuFourteenComponent } from './events/individual-events/09-hu-fourteen/hu-fourteen.component';
 import { HuThirteenComponent } from './events/individual-events/01-hu-thirteen/hu-thirteen.component';
 import { HuTwelveComponent } from './events/individual-events/02-hu-twelve/hu-twelve.component';
 import { HuElevenComponent } from './events/individual-events/03-hu-eleven/hu-eleven.component';
@@ -58,7 +59,9 @@ import { ThanksComponent } from './thanks/thanks.component';
     PrivacyPolicyComponent,
     WaiverComponent,
     OpenDataComponent,
-    ThanksComponent
+    ThanksComponent,
+    HuFourteenComponent,
+    HuFourteenComponent
   ],
   imports: [
     BrowserModule,
