@@ -23,6 +23,7 @@ import { PrivacyPolicyComponent } from './docs/privacy-policy/privacy-policy.com
 import { WaiverComponent } from './waiver/waiver.component';
 import { OpenDataComponent } from './open-data/open-data.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { HuFifteenComponent } from './events/individual-events/10-hu-fifteen/hu-fifteen.component';
 
 const routes: Routes = [
 
@@ -45,6 +46,13 @@ const routes: Routes = [
         component: EventsComponent,
         data: {
             state: 'events'
+        }
+    },
+    {
+        path: 'events/xv',
+        component: HuFifteenComponent,
+        data: {
+            state: 'events/xv'
         }
     },
     {
