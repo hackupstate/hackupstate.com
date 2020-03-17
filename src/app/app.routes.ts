@@ -24,6 +24,7 @@ import { WaiverComponent } from './waiver/waiver.component';
 import { OpenDataComponent } from './open-data/open-data.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { HuFifteenComponent } from './events/individual-events/10-hu-fifteen/hu-fifteen.component';
+import { EmergencyComponent } from './emergency/emergency.component';
 
 const routes: Routes = [
 
@@ -46,6 +47,13 @@ const routes: Routes = [
         component: EventsComponent,
         data: {
             state: 'events'
+        }
+    },
+    {
+        path: 'emergency',
+        component: EmergencyComponent,
+        data: {
+            state: 'emergency'
         }
     },
     {
