@@ -1,0 +1,52 @@
+@import url("../../styles.less");
+
+.upcoming-events-container{display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; width: 100%; height: 100%; padding: 60px 0;
+    .calendar-day-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; flex: 1; height: 100%; min-height: 300px; position: relative; 
+        h3{.inter(700); font-size: 21px; position: relative;
+            &:after{content: ''; width: calc(100vw - 86px); height: 1px; border-radius: 25px; background: linear-gradient(to right, #126a60, #000); position: absolute; bottom: -10px; left: 0;}
+        }
+        h4{.inter(900); font-size: 88px; transform: rotate(-90deg); text-transform: uppercase; color: transparent; -webkit-text-stroke: 1px @teal; position: absolute; left: -90px; bottom: 40px;}
+    }
+    .calendar-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; flex: 3; flex-shrink: 0; width: 100%; min-height: 300px; margin-top: 40px; position: relative;
+        .single-calendar-date-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex: 1; flex-shrink: 0; width: calc(100% - 0px); min-height: 60px; border-bottom: 1px solid #1b1b24;
+            .calendar-event-container{display: flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%; height: 100%; padding: 10px; background: transparent;
+                .calendar-event-info-container{display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%;
+                    span.calendar-event-title{.inter(700); font-size: 18px; line-height: 1; color: @white-green;}
+                    p.calendar-event-description{.inter(500); color: darken(@white-blue, 5%); font-size: 12.5px; line-height: 1.5; padding-top: 3px;}
+                }
+                .event-time{display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end; .inter(400); font-size: 14.5px; color: white; background: @darkest-grey; padding: 6px 12px; border-radius: 24px; margin: 0 0px 0 auto;
+                    svg{width: 23px; height: 23px; padding-right: 8px;
+                        .primary{fill: darken(@white-blue, 10%); opacity: .75;}
+                        .secondary{fill: @darkest-grey;}
+                    }
+                    span.time{padding-bottom: 3px;}
+                }
+            }
+        }
+    }
+    .overall-calendar-container{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; width: 100%; min-height: 150px; max-height: 350px; height: auto; background: rgba(2, 2, 21, 1); overflow-y: auto; padding: 5px; border-radius: 8px;
+        .single-calendar-date-container{display: flex; flex-direction: row; width: 100%; margin: 0 0 20px 0; 
+            .single-calendar-date{display: flex; flex-direction: column; justify-content: flex-start; align-items: center; min-width: 75px; .inter(900); position: sticky; top: 10px; left: 0;
+                .calendar-day{font-size: 24px;}
+                .calendar-month-short{font-size: 16px; text-transform: uppercase;}
+            }
+            .calendar-event-container{display: flex; flex-direction: row; width: 100%; min-height: 60px; padding: 10px; background: @teal; border-radius: 6px;
+                .calendar-event-icon{width: 45px; height: 45px; margin-right: 12px;
+                    img{width: 100%; height: auto; filter: grayscale(100%) brightness(-200%);}
+                }
+                .calendar-event-info-container{display: flex; flex-direction: column; width: 100%; color: @darkest-grey; .inter(600);
+                    span.calendar-event-title{.inter(900); padding-bottom: 5px;}
+                    p.calendar-event-description{.inter(500);}
+                }
+                .calendar-event-time{display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+                    svg{width: 14px; height: 14px; border: 2px solid @dark-grey-blue; border-radius: 100%; opacity: .85; margin-right: 8px; flex-shrink: 0; flex-grow: 0;
+                        .primary{fill: transparent;}
+                        .secondary{fill: @darkest-grey;}
+                    }
+                    span.time{font-size: 12px;}
+                }
+                a.event-sign-up-button{text-decoration: none; display: flex; flex-direction: row; justify-content: center; align-items: center; white-space: nowrap; background: @darkest-grey; color: @teal; .inter(700); padding: 5px 20px; border-radius: 28px;}
+            }
+        }
+    }
+}
